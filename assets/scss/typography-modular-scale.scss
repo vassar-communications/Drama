@@ -1,0 +1,195 @@
+@import "_imports";
+
+/*	TYPOGRAPHY
+	========== */
+
+/*	Modular scales mixin from:
+	https://github.com/Team-Sass/modular-scale */
+
+.ac-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
+
+$ms-base: 1em;
+$ms-ratio: $major-third;
+
+/* basic.css overrides 
+ 	 =================== */
+
+address,caption,cite,code,dfn,em,h1,h2,h3,h4,h5,h6,pre,strong,th,var, /* line 11 */
+b, /* line 31 */
+.u-VCard__adr b, .u-VCard__info b, .u-VCard__org { /* line 340 */
+	 font-weight: $fontWeightNormal;
+}
+
+mark, /* line 78 */
+strong, /* line 83, 116 */
+.ac-skipLink:active, .ac-skipLink:focus { /* line 298 */
+	font-weight: $fontWeightBold;
+}
+
+/* Elements */
+
+html {
+	font-family: $sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 110%;
+	margin-top: ms(0);
+	margin-bottom: ms(-8);
+}
+h1 {
+	font-size: ms(4);
+}
+h2 {
+	font-size: ms(3);
+}
+h3 {
+	font-size: ms(1.6);
+}
+h4 {
+	font-size: ms(1.2);
+}
+h5 {
+	font-size: ms(.5);
+}
+
+p,
+ol,
+ul,
+blockquote,
+dt,
+dd {
+	font-size: ms(.8);
+	font-family: $sans-serif;
+	line-height: 140%;
+	font-weight: $fontWeightNormal;
+	line-height: 120%;
+	margin-bottom: ms(1);
+}
+
+ul,
+ol {
+	margin: ms(-2) 0;
+}
+
+th {
+	font-weight: $fontWeightBold;
+}
+
+td {
+	font-weight: $fontWeightNormal;
+}
+
+/* This mixin keeps font-sizes in nested lists from 
+growing exponentially. The font-size is based on the 
+current Modular Scale setting above. Adjust accordingly */
+
+ul,
+ol {
+	@include v-pixel-fallback ('font-size', 1.19544rem);
+}
+
+li {
+	margin: 0 0 ms(-5) 0;
+}
+
+/* Main page content */
+
+.u-lMain {
+	font-size: 90%;
+}
+
+.u-pageTitle {
+	margin-top: 0;
+}
+
+.intro * {
+	font-family: $serif;
+	font-size: ms(2.2);
+	font-weight: 100;
+	line-height: 116%;
+}
+
+/* u-lAside sidebar styles */
+
+.u-lAside {
+
+	h1 {
+		font-size: ms(3);
+	}
+
+	h2 {
+		font-size: ms(2);
+	}
+
+	h3 {
+		font-size: ms(1);
+	}
+
+	h4 {
+		font-size: ms(.6);
+	}
+
+	h5 {
+		font-size: ms(.4);
+	}
+
+	p,
+	ol,
+	ul {
+		font-size: ms(.8);
+	}
+
+	ul,
+	ol {
+		margin-bottom: ms(-2);
+	}
+
+	li {
+		margin-bottom: ms(-5);
+		line-height: 1.2;
+	}
+
+}
+
+/* Bios */
+
+.u-BioList__list .u-BioList__name {
+	font-size: 1.2em;
+}
+.u-Bio__contactInfo {
+	@include v-pixel-fallback ('font-size', .9rem);
+}
+.u-Bio__contactData {
+	font-weight: $fontWeightNormal;
+}
+.u-Bio__contactItemLabel {
+	font-size: .85em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.u-Bio__title {
+	font-weight: $fontWeightNormal;
+}
+
+/* Ask Ray what he thinks of this */
+
+@media all and (min-width: $tiny) {
+	.u-lMain {
+		font-size: 100%;
+	}
+	p {
+		line-height: 130%;
+	}
+	.u-lAside {
+		p,
+		ol,
+		ul {
+			font-size: ms(-.2);
+		}
+	}
+}

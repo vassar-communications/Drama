@@ -1,0 +1,233 @@
+@import "_imports";
+
+/*	Homepage
+	-------- */
+
+.u-pageHome {
+	border: none;
+	position: relative;
+}
+.u-pageHome {
+	.Module--contact.Module--sidebar {
+		display: none;
+	}
+	.u-NavSite__level--1>.u-NavSite__itemContainer>.u-NavSite__item.u-NavSite__item--isCurrent {
+		color: #fff;
+	}
+	.u-NavSite__level--1>.u-NavSite__itemContainer>.u-NavSite__item:hover {
+		color: #92dbfe;
+	}
+	.u-Gallery__modalThumbnail {
+		display: none !important;
+	}
+	body {
+		max-width: none;
+	}
+
+	@media all and (max-width: $small) {
+		.u-Masthead__siteName--link {
+			font-size: 15vw;
+			line-height: .9;
+			letter-spacing: -1vw;
+			margin-top: 1em;
+			display: block;
+		}
+	}
+
+	@media all and (min-width: $medium) {
+		.u-lAside {
+			padding-right: 4%;
+			width: 100%;
+		}
+	}
+	@media all and (max-width: $large) {
+		.u-lAside {
+			padding: 6%;
+		}
+	}
+	@media all and (min-width: $large) {
+		.u-Search {
+			width: 19.5%;
+		}
+		.u-lAside {
+			width: 30%;
+		}
+	}
+	
+	/*	Stage setup
+		-----------  */
+
+	.u-lMain,
+	.u-lContent {
+		margin: 0;
+		padding: 0;
+	}
+	.u-lContent {
+		padding-top: 16em;
+		padding-right: 4%;
+	}
+	@media all and (min-width: $small) {
+		.u-lContent {
+			padding-top: 21em;
+		}
+	}
+	.modulesArea {
+		display: none;
+	}
+
+
+
+
+	/*	Theme 1
+		------- */
+	
+	.u-lHeader {
+background: #000000; /* Old browsers */
+background: -moz-linear-gradient(top,  #000000 0%, #0cacf7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#0cacf7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #000000 0%,#0cacf7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #000000 0%,#0cacf7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #000000 0%,#0cacf7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #000000 0%,#0cacf7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0cacf7',GradientType=0 ); /* IE6-9 */
+	}
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: #92dbfe;
+	}
+	body {
+		background: #0CACF7;
+		max-width: 86em;
+	}
+	body:before, body:after {
+	    background: linear-gradient(to bottom, #000000 0%,#0cacf7 28%);
+	}
+	.u-NavSite__item {
+		color: #fff;
+	}
+	.u-Masthead__siteName--link {
+		color: #fff;
+	}
+	.u-Masthead__vassar--link {
+		color: #0cacf7;
+	}
+	.modulesArea {
+		background: #000;
+	}
+	.u-lContent {
+		background-image: url(#{$imagesFolder}/scene.png);
+		background-image: linear-gradient(transparent, transparent), url(#{$imagesFolder}/scene.svg);
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+	}
+	
+	
+	@media all and (min-width: $large) {
+		.u-lContent {
+			background-image: none;
+		}
+		.u-lMain {
+			background-image: url(#{$imagesFolder}/scene.png);
+			background-image: linear-gradient(transparent, transparent), url(#{$imagesFolder}/scene.svg);
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			background-size: 70%;
+		}
+	}
+
+	@media all and (min-width: 1360px) {
+		.u-lMain {
+			background-size: 48em;
+		}
+	}
+	
+	.u-Search {
+		border-color: #0cacf7;
+	}
+	::-webkit-input-placeholder {
+		color: #0cacf7;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: #0cacf7;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: #0cacf7;
+	}
+	:-ms-input-placeholder {  
+		color: #0cacf7;
+	}
+	.Module--sidebar .Module__listItem {
+		border-top: 1px solid rgba(255,255,255,.3);
+	}
+	.Module--sidebar .Module__listItem:first-child,
+	.Module--sidebar .Module__listItem:first-of-type {
+		border-top: none;
+	}
+	.u-lMain {
+		position: relative;
+	}
+	.u-lMain:before {
+		content: "";
+		background: url("#{$imagesFolder}/beam.png") no-repeat;
+		position: absolute;
+		width: 25em;
+		height: 36em;
+		top: -16em;
+		left: 8em;
+	}
+	.u-lMain:before {
+		animation: pulse 5s;
+	}
+	
+	@keyframes pulse {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
+	
+	.u-lAside {
+		background: #000;
+		color: #aaa;
+	}
+	.Module__headerLink,
+	.Module__headerLink:hover,
+	.Module__headerLink:visited,
+	.Module__headerLink:visited:hover {
+		color: #aaa;
+	}
+
+	
+	@media all and (min-width: $small) {
+		.u-lMain:before {
+			top: -12em;
+		}
+		.u-Search__submit svg {
+			fill: #92dbfe;
+		}
+		.u-Search__submit:hover svg {
+			fill: #fff;
+		}
+	}
+
+	@media all and (min-width: $large) {
+		.u-lAside {
+			background: transparent;
+			color: #000;
+		}
+		.Module__headerLink,
+		.Module__headerLink:hover,
+		.Module__headerLink:visited,
+		.Module__headerLink:visited:hover {
+			color: #000;
+		}
+	}
+
+
+
+}

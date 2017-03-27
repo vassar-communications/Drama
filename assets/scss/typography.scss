@@ -1,0 +1,350 @@
+@import "_imports";
+
+/*	TYPOGRAPHY
+	========== */
+
+.ac-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
+
+/* basic.css overrides 
+ 	 =================== */
+
+address,caption,cite,code,dfn,h1,h2,h3,h4,h5,h6,pre,strong,th,var, /* line 11 */
+b, /* line 31 */
+.u-VCard__adr b, .u-VCard__info b, .u-VCard__org { /* line 340 */
+	 font-weight: $fontWeightNormal;
+}
+
+mark, /* line 78 */
+strong, /* line 83, 116 */
+.ac-skipLink:active, .ac-skipLink:focus { /* line 298 */
+	font-weight: $fontWeightBold;
+}
+
+/* Elements */
+
+html {
+	font-size: 1em;
+	font-family: $sans-serif;
+	font-weight: 100;
+	line-height: 160%;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+h1 {
+	font-size: 2.44em;
+}
+h2 {
+	font-size: 2.75em;
+	font-family: $sans-serif;
+	margin-bottom: .75em;
+	font-weight: 300;
+	line-height: 1.15;
+}
+h3 {
+	font-size: 1.6em;
+	font-weight: bold;
+	font-family: $sans-serif;
+}
+h4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+h5 {
+	font-size: .9em;
+	font-weight: bold;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+}
+h6 {
+	font-size: .85em;
+	font-weight: bold;
+	font-family: $serif;
+	font-style: italic;
+}
+td, blockquote {
+	font-weight: normal;
+	font-family: $sans-serif;
+	font-size: 1em;
+	line-height: 1.4;
+}
+blockquote {
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+.u-lContent a {
+	font-weight: 500;
+}
+strong {
+	font-weight: bold;
+}
+p,
+ol,
+ul,
+blockquote,
+dt,
+dd {
+	margin-bottom: 1.25em;
+	margin-top: 0;
+}
+.u-lContent {
+	font-family: $serif;
+	font-weight: 100;
+	font-size: 1em;
+	line-height: 160%;
+}
+ul,
+ol {
+	margin: .64em 0;
+}
+
+th {
+	font-weight: $fontWeightBold;
+}
+
+td {
+	font-weight: $fontWeightNormal;
+}
+
+li {
+	margin: 0 0 0.32768em 0;
+	line-height: 1.4;
+}
+
+/* Main page content */
+
+.u-lMain {
+	font-size: 90%;
+}
+
+.u-pageTitle {
+	margin-top: 0;
+}
+
+.intro * {
+	font-family: $serif;
+	font-size: 1.63381em;
+	font-weight: 100;
+	line-height: 116%;
+}
+.Module--sidebar .all-link a {
+    font-weight: bold;
+    font-size: .9em;
+}
+
+/* u-lAside sidebar styles */
+
+.u-lAside {
+
+	h1 {
+		font-size: 1.95313em;
+	}
+
+	h2 {
+		font-size: 1.5625em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.14326em;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	h5 {
+		font-size: .9em;
+		text-transform: none;
+		font-style: italic;
+	}
+	h6 {
+		font-size: .9em;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	p,
+	ol,
+	ul {
+		font-family: $sans-serif;
+		font-weight: 400;
+		font-size: .9em;
+		line-height: 1.4;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 0.64em;
+	}
+
+	li {
+		margin-bottom: 0.32768em;
+		line-height: 1.2;
+	}
+
+}
+
+/*	Masthead
+	-------- */
+
+.u-Masthead {
+	font-family: $sans-serif;
+}
+.u-Masthead__siteName--link {
+	font-weight: 700;
+	letter-spacing: -1px;
+}
+.u-Masthead__siteName {
+	line-height: 100%;
+	font-size: 2rem;
+	margin-bottom: .1em;
+}
+.u-Masthead__vassar {
+	font-weight: bold;	
+}
+
+
+
+/* Ask Ray what he thinks of this */
+
+@media all and (min-width: $tiny) {
+	.u-lMain {
+		font-size: 100%;
+	}
+	p {
+		line-height: 160%;
+	}
+	.u-lAside {
+		p,
+		ol,
+		ul {
+			font-size: 0.95635em;
+		}
+	}
+}
+
+
+/*	Bios
+	---- */
+
+.u-biosInner .u-pageTitle {
+	margin-bottom: .15em;
+}
+
+
+/*	Search	*/
+
+::-webkit-input-placeholder {
+	font: 300 .8rem/1.4 $sans-serif;
+	text-transform: uppercase;
+}
+:-moz-placeholder { /* Firefox 18- */
+	font: 300 .8rem/1.4 $sans-serif;
+	text-transform: uppercase;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	font: 300 .8rem/1.4 $sans-serif;
+	text-transform: uppercase;
+}
+:-ms-input-placeholder {  
+	font: 300 .8rem/1.4 $sans-serif;
+	text-transform: uppercase;
+}
+
+
+/*	Nav
+	--- */
+.u-NavSite__level--2 .u-NavSite__item {
+	padding: .2em;
+}
+
+
+/*	News
+	---- */
+
+.u-ArticleListItem__label--type {
+	display: none;
+}
+
+
+
+/*	Footer
+	------ */
+
+.u-lFooter .u-VCard__adr b,
+.u-lFooter .u-VCard__info b,
+.u-lFooter .u-VCard__org
+{
+	font-weight: normal;
+	font-family: $sans-serif;
+}
+.icomoon, .icon, [class*=icomoon-]::before, [class*=icon-]::before, [class*=iconDecorative--]::before, [class*=iconDecorative-]::before, [class*=iconDecorativeAfter--]::after, [class*=iconDecorativeAfter-]::after {
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+.u-VCard__label {
+	text-transform: uppercase;
+}
+
+
+
+/*	Galleria
+	-------- */
+
+.u-Gallery__link {
+	margin-top: 1em;
+}
+.u-Gallery__link .icon-slideshow {
+	font-weight: 500;
+	font-size: 1em;
+}
+.u-Figure .u-Figure__caption {
+	font-weight: normal;
+}
+
+
+/*	Modules
+	------- */
+
+.u-lAside .Module__header {
+	text-transform: uppercase;
+}
+
+/* Add to config as soon as the frontpage bio-list is in */
+
+.u-BioList__list .u-BioList__name {
+	font-size: 1.2em;
+	font-family: $serif;
+}
+.u-BioList__title {
+	font-family: $serif;
+	font-style: italic;
+	font-weight: 100;
+	font-size: .9em;
+	color: #666;
+}
+
+/*
+@import "add-to-modules.scss";
+@import "additions.scss";
+*/
+
+.ac-NavAnchor--top {
+	font-weight: normal;
+}
+
+
+
+
+
+

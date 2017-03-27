@@ -1,0 +1,347 @@
+@import "_imports";
+
+
+
+
+/* The padding on u-lHeader, u-lMain, u-lFooter, and u-NavSite. */
+
+$layoutContainerPadding--tiny: 4%;
+$layoutContainerPadding--medium: 3%;
+
+
+
+/*	LAYOUT
+	====== */
+
+@media screen {
+
+	html {
+		overflow-x: hidden;
+		padding: 0;
+	}
+	.u-lFooter {
+		clear: both;
+		position: relative;
+	}
+.u-List--site,
+.u-VCard__info {
+	margin: 0;
+	padding: 0;
+}
+.u-VCard__info,
+.u-List--site {
+	position: relative;
+	margin-top: .25em;
+	padding-top: .25em;
+}
+	.u-lFooter:before,
+	.u-lFooter:after {
+		content: "";
+		position: absolute;
+		background: #000;
+		width: 999em;
+		bottom: 0;
+		top: 0;
+		z-index: 10;
+	}
+	.u-lFooter:before {
+		right: 100%;
+	}
+	.u-lFooter:after {
+		left: 100%;
+	}
+	.u-VCard__info,
+	.u-List--site {
+		margin: 0;
+		padding: 0;
+	}
+
+	.u-Figure {
+		margin: 0 0 1em;
+		overflow: hidden;
+	}
+	.u-Figure__caption {
+		margin-top: .25em;
+	}
+
+	.u-lAside .u-Figure {
+		margin-bottom: 1.5em;
+	}
+
+	body {
+		position: relative;
+	}
+	body:before,
+	body:after {
+		content: "";
+		position: absolute;
+		background: #fff;
+		width: 999em;
+		bottom: 0;
+		top: 0;
+		z-index: 1;
+	}
+	body:before {
+		right: 100%;
+	}
+	body:after {
+		left: 100%;
+	}
+	.u-lHeader {
+		padding: 4%;
+	}
+	.u-lFooter {
+		padding: 4rem $layoutContainerPadding--medium;
+	}
+	.galleria--content {
+		margin: 0 0 2.5%;
+	}
+	.u-Gallery__link {
+		margin-top: .2em;
+	}
+	.u-lContent,
+	.u-lAside {
+		padding: 4%;
+	}
+	.u-Search__field {
+		padding-left: 4%;
+	}
+	.Module--sidebar .Module__listItem {
+		padding: .3em 0;
+		line-height: 1.2;
+	}
+}
+
+
+/*	SMALL
+	----- */
+
+@media all and (min-width: $small) {
+	.u-lMain {
+		width: 70%;
+		float: right;
+		padding: $layoutContainerPadding--medium;
+	}
+	.u-NavSite {
+		width: 30%;
+		float: left;
+	}
+	.u-NavSite__level {
+	    margin: 0.25em 0 .5em 0;
+	}
+	.u-lMain {
+		padding-top: 0;
+	}
+	.u-lFooter {
+		padding: 2em $layoutContainerPadding--medium;
+	}
+	.u-lHeader {
+		padding: 7em $layoutContainerPadding--medium 2em $layoutContainerPadding--medium;
+		position: relative;
+	}
+	.u-Masthead__siteName {
+		margin-top: 4rem;
+	}
+	.u-lContent,
+	.u-lAside {
+		padding: 0;
+	}
+	.u-Search {
+		width: 16em;
+		position: absolute;
+		right: auto;
+		top: 7em;
+		left: $layoutContainerPadding--medium;
+	}
+	.u-pageHome {
+		.u-lHeader {
+			padding: 2em $layoutContainerPadding--medium;
+		}
+		.u-Search {
+			top: 2em;
+		}
+	}
+
+}
+
+/*	MEDIUM
+	------ */
+
+@media all and (min-width: $medium) {
+	.u-lMain {
+		width: 74%;
+		padding-right: 7%;
+		margin-bottom: 3em;
+	}
+	.u-NavSite {
+		width: 26%;
+		margin-bottom: 3em;
+	}
+	.u-NavSite {
+		padding-top: 0;
+	}
+	.u-Search {
+		width: 23%;
+	}
+	.u-lAside {
+		width: 50%;
+	}
+}
+
+/*	LARGE
+	----- */
+
+@media all and (min-width: $large) {
+
+	.u-biosInner {
+		.u-Search {
+			width: 19%;
+		}
+	}
+	.u-Search {
+		width: 20.75%;
+	}
+
+	body {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.u-lMain {
+		width: 80%;
+		padding-right: $layoutContainerPadding--medium;
+	}
+	.u-NavSite {
+		width: 20%;
+	}
+	.u-lAside {
+		padding: 0;
+		padding-left: 2%;
+		width: 30%;
+		float: right;
+	}
+	.u-lContent {
+		padding: 0;
+		padding-right: 2%;
+		width: 70%;
+		float: left;
+	}
+	.u-lAside {
+		width: 30%;
+	}
+	.u-biosInner .u-lMain {
+		width: 75%;
+	}
+	.u-biosInner .u-NavSite {
+		width: 25%;
+	}
+	.u-pageHome {
+		.u-lHeader {
+			padding: 2em $layoutContainerPadding--medium 7em $layoutContainerPadding--medium;
+		}
+	}
+}
+
+
+@media all and (min-width: $pointAtWhichSearchMovesToRight) {
+	.u-Masthead__siteName {
+		margin-top: 0;
+	}
+	.u-Search {
+		left: auto;
+		right: 3%;
+	}
+}
+
+.Module--sidebar.Module--news .Module__listItem {
+	padding: .2em 0 .3em 0;
+	margin-bottom: 0;
+}
+
+
+@media all and (min-width: $small) {
+	.modulesArea {
+		.Module.Module--halfWidth:first-child {
+			padding-right: 4%;
+		}
+		.modulesArea__col:first-of-type {
+			padding-left: 0;
+		}
+		.Module.Module--halfWidth {
+			width: 50%;
+			float: left;
+		}
+		.Module.Module--fullWidth {
+			width: 100%;
+			display: block;
+			clear: both;
+			border-right: none;	
+		}
+		.Module.Module--halfWidth:last-child {
+			padding-left: 4%;	
+		}
+		.modulesArea__row {
+			overflow: hidden;
+			padding: 1em 0;
+			clear: both;
+		}
+	}
+}
+
+
+
+
+/*	Frontpage modules
+	----------------- */
+
+.Module__list {
+	padding: 0;
+}
+.modulesArea {
+	.Module__header {
+		font: bold 1em $sans-serif;
+	}
+	.Module__listItem {
+		font: 1em/1.2 $sans-serif;
+	}
+	.Module__desc {
+		font: .9em/1.2 $sans-serif;
+	}
+}
+
+
+.u-ArticleListItem {
+	margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

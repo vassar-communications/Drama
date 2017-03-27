@@ -1,0 +1,256 @@
+@import "_imports";
+
+$sans-serif: "aktiv-grotesk-std";
+
+/*	COLOR
+	===== */
+
+/* Sample palette: you can change the variables 
+and values to whatever you want and use throughout
+ this stylesheet */
+
+.u-lFooter a,
+.u-NavSite a {
+	border: none;
+}
+.u-lFooter a,
+.u-lFooter a:visited {
+	color: #fff;
+}
+.u-NavSite__level .u-NavSite__level {
+	border-left: 1px solid #eee;
+	margin-bottom: .15em;
+}
+
+html {
+	background: #000;
+}
+blockquote {
+    background-color: #eee;
+}
+a {
+	color: $linkColor;
+	border-color: lighten(#2090D6, 40%);
+}
+a:visited {
+	color: $linkColorVisited;
+	border-color: lighten($linkColorVisited, 40%);
+}
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
+	color: $linkColorHover;
+	border-color: lighten(#F05B11, 40%);
+}
+/*
+.u-Container {
+	background: #fff;
+}
+*/
+
+
+.u-Masthead__vassar--link:hover,
+.u-Masthead__vassar--link:visited:hover {
+	color: #fff;
+}
+.u-Masthead__vassar--link:hover svg {
+	fill: #fff;
+}
+
+body {
+	background: #fff;
+}
+.u-lHeader {
+	background: #F2EEE1;
+	background: #fff;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #e7e7e7;
+}
+
+tbody td,
+tbody th {
+	border: 1px solid #ccc;
+}
+
+
+@media all and (min-width: $small) {
+	.u-Search {
+		border: 2px solid #eee;	
+	}
+	.u-Search__form {
+		background: none !important;
+	}
+	html {
+		border-top: 18px solid #E2DFCF;
+	}
+}
+.u-Search__submit svg {
+	fill: #aaa;
+}
+::-webkit-input-placeholder {
+	color: #aaa;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: #aaa;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: #aaa;
+}
+:-ms-input-placeholder {  
+	color: #aaa;
+}
+
+
+/*	Bios
+	---- */
+
+.u-BioList__list .u-BioList__name {
+	border: none;
+}
+
+
+/*	Images
+	------ */
+
+.u-Gallery__link {
+	border: none;
+}
+
+
+/*	Masthead
+	-------- */
+@media all and (min-width: $small) {
+	.u-lHeader {
+		background: url("../images/css/header.svg") no-repeat top center;
+		background-size: 700px;
+	}
+}
+.u-Masthead__siteName--link:link,
+.u-Masthead__siteName--link:visited {
+	color: #000;
+}
+.u-Masthead__vassar--link,
+.u-Masthead__vassar--link:visited {
+	color: #aaa;
+}
+.u-Masthead__siteName--link:hover {
+	color: #aaa;
+}
+.u-Masthead__vassar--link:hover {
+	color: #000;
+}
+
+
+/*	Navigation
+	---------- */
+.u-NavSite__item,
+.u-NavSite__item:visited {
+	color: #aaa;
+}
+.u-NavSite__item:hover,
+.u-NavSite__item:visited:hover {
+	color: #000;
+}
+.u-NavSite__item--isOpen>.u-NavSite__item,
+.u-NavSite__item--isOpen>.u-NavSite__item:visited,
+.u-NavSite__item.u-NavSite__item--isCurrent,
+.u-NavSite__item.u-NavSite__item--isCurrent:visited {
+	color: #000;
+	font-weight: 400;
+}
+
+
+
+
+/*	Footer
+	------ */
+
+.u-lFooter {
+	background: #000;
+	color: #666;
+}
+
+
+/*	Add to config	*/
+
+@media all and (min-width: $small) {
+	.u-Search {
+		background: none;
+	}
+	.u-Search__field {
+		background: none;
+		border: none;
+	}
+	.u-Search__submit {
+		background: none;
+	}
+	.u-Search__submit:hover {
+		background: none;
+	}
+	.u-Search__submit:hover svg {
+		fill: #444;
+	}
+}
+
+
+
+/*	Modules
+	------- */
+
+.Module__link {
+	border: none;
+}
+
+
+/*	News
+	---- */
+
+.u-ArticleListItem__link:hover .u-ArticleListItem__label--dateline__postedDate,
+.u-ArticleListItem__link:hover .u-ArticleListItem__label {
+	color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

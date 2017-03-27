@@ -1,0 +1,40 @@
+@import "../_imports";
+
+/*	rev# 140428 */
+
+
+/*	BIO INDEX
+	--------- */
+
+.u-BioList__list {
+	@extend .noBullets;
+}
+.u-BioList__list .u-BioList__name {
+	display: block;
+}
+.u-BioList__list .u-BioList__comma {
+	@extend .ac-visuallyHidden;
+}
+.u-BioList__list .u-BioList__title {
+	display: block;
+}
+.u-BioList__list .u-BioList__item {
+	margin-bottom: .75em;
+}
+
+
+/*	BIOS
+	---- */
+
+.u-Bio__contactInfo {
+	margin-bottom: 1.5em;
+}
+.u-Bio__contactInfo li {
+}
+.u-Bio__title {
+	margin: .4em 0 .5em 0;
+}
+.photo.u-Figure__image {
+	margin-right: 1em;
+	width: 100%;
+}
