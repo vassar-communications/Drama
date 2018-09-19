@@ -1,0 +1,33 @@
+@media (min-width: 600px)
+{
+    html.g- {
+        border-top: 0;
+    }
+
+    .g- .PageContent {
+    /*    border-top: 1px solid #E2DFCF; */
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .g- body {
+        max-width: none;
+        margin: 0 auto;
+    }
+    
+    .g- .PageContentInner {
+        max-width: 1375px;
+        margin: 0 auto;
+    }
+    
+    
+}
+.g-.u-pageHome .PageContent {
+    background: linear-gradient(to bottom, #000000 0%,#0cacf7 28%);
+}
+
+
+.g-.u-pageHome .u-lHeader {
+    background: none;
+}
