@@ -6,3 +6,28 @@
 @import "to-be-centralized";
 @import "starterVariables";
 @import "global-navigation";
+
+
+html {
+    background: #fff;
+}
+.u-pageHome body, .u-pageHome body:before, .u-pageHome body:after,
+.g-.u-pageHome .PageContent {
+    background: none;
+}
+
+.u-pageHome .u-lMain,
+.u-pageHome .u-lContent {
+    background-image: none !important;
+}
+.u-pageHome .u-lContent {
+    padding-top: 0;
+}
+.u-pageHome .u-lMain:before {
+	display: none;
+}
+system-data-structure,
+.u-pageHome .u-Gallery__modalThumbnail {
+    display: block !important;
+    visibility: visible;
+}
