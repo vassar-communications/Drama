@@ -27,7 +27,15 @@
 
 
 	.u-Masthead__siteName {
-		font-size: 3rem;
+		font-size: 4rem;
+		text-align: center;
+		margin: 0.3em 0 0.1em 0;
+
+		.u-Masthead__siteName--link {
+			&:link, &:visited {
+				color: #714242;
+			}
+		}
 	}
 
 	@media all and (max-width: $small) {
